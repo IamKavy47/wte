@@ -109,6 +109,5 @@ function experties(){
 }
 locomotive()
 loadingAnimation()
-hello()
 herovideo()
 experties()
