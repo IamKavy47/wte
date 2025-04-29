@@ -32,7 +32,6 @@ body,html{
     width: 100%;
     position: fixed;
     z-index: 999;
-    background-color: #030303;
     padding: 15vh 5vw;
 }
 
@@ -55,7 +54,7 @@ body,html{
 #line1-part1 h5, #line1-part1 h6{
     font-size: 3vw;
     font-weight: 100;
-    font-family: 'degular';
+    font-family: 'font2';
 }
 #line1-part1 h5{
     /* background-color: red; */
@@ -72,6 +71,7 @@ body,html{
     font-size: 5vw;
     text-transform: uppercase;
     font-weight: 900;
+    font-family:"degular";
     opacity: 0;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
