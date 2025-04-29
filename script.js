@@ -70,13 +70,9 @@ tl.to("#loader",{
     display:"none"
 })
 tl.from("#nav",{
-  opacity:0
+    opacity:0
 })
-}
-
-function hello(){
-  var tl = gsap.timeline();
-  tl.from("#page1 span",{
+tl.from("#page1 span",{
     y:700,
     duration:0.7,
     stagger:0.1
