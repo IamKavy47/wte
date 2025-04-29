@@ -29,32 +29,44 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 }
-
-locomotive()
-
-gsap.to("#page2 video",{
+function hello(){
+  var tl = gsap.timeline();
+  tl.from("#page1 span",{
+    y:700,
+    duration:0.7,
+    stagger:0.1
+  })
+}
+function herovideo(){
+  gsap.to("#page2 video",{
   
-  width:"100%",
-  scrollTrigger:{
-    trigger:"#page2",
-    scroller:"#main",
-    // markers:true,
-    // start:"top 0",
-    // end:" top -100%"
-    scrub:1
-  }
-})
-
-gsap.to("#page4 h1",{
-  transform:"translateX(-130vw)",
-  scrollTrigger:{
-    trigger:"#page4",
-    scroller:"#main",
-    // markers:true,
-    start:"top 0",
-    end:"top -100%",
-    pin:true,
-    scrub:2
-
-  }
-})
+    width:"100%",
+    scrollTrigger:{
+      trigger:"#page2",
+      scroller:"#main",
+      // markers:true,
+      // start:"top 0",
+      // end:" top -100%"
+      scrub:1
+    }
+  })
+}
+function experties(){
+  gsap.to("#page4 h1",{
+    transform:"translateX(-130vw)",
+    scrollTrigger:{
+      trigger:"#page4",
+      scroller:"#main",
+      // markers:true,
+      start:"top 0",
+      end:"top -100%",
+      pin:true,
+      scrub:2
+  
+    }
+  })
+}
+locomotive()
+hello()
+herovideo()
+experties()
