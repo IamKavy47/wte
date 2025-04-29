@@ -31,3 +31,30 @@ ScrollTrigger.refresh();
 }
 
 locomotive()
+
+gsap.to("#page2 video",{
+  
+  width:"100%",
+  scrollTrigger:{
+    trigger:"#page2",
+    scroller:"#main",
+    // markers:true,
+    // start:"top 0",
+    // end:" top -100%"
+    scrub:1
+  }
+})
+
+gsap.to("#page4 h1",{
+  transform:"translateX(-130vw)",
+  scrollTrigger:{
+    trigger:"#page4",
+    scroller:"#main",
+    // markers:true,
+    start:"top 0",
+    end:"top -100%",
+    pin:true,
+    scrub:2
+
+  }
+})
