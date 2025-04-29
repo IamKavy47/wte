@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "helvetica";
+    src: url("/fonts/helveticaneue.ttf");
+}
+@font-face {
+    font-family: "degular";
+    src: url("https://use.typekit.net/af/fbbea0/00000000000000007735c876/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3");
+}
 *{
     background-color: #151414;
     color: #F3C77C; 
@@ -16,10 +24,38 @@ body,html{
     width: 100%;
 } */
 
+#nav{
+    display: flex;
+    z-index: 99;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4vw 1.5vw;
+}
+#nav-part2{
+    display: flex;
+    gap: 6vw;
+    padding-left: 1vw;
+    font-family: "helvetica";
+    font-size: 1.5vw;
+}
+#nav-part2{
+    font-weight: 400;
+}
+
 #page1{
     height: 100vh;
-    width: 100%;
-    
+    width: 100%;   
+    align-items: center;
+    text-align: center;
+}
+#page1 h4{
+    /* padding-top: -100vh; */
+    font-size: 50vw;
+    letter-spacing: -5px;
+    font-weight: 900;
+    font-family: "degular";
+    z-index:9;
+    line-height: 0.615;
 }
 
 #page2{
