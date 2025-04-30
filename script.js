@@ -29,55 +29,42 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 }
-function loadingAnimation(){
-  var tl = gsap.timeline();
-tl.from(".line h1", {
-  y: 150,
-  stagger: 0.25,
-  duration: 0.6,
-  delay: 0.5,
-});
-tl.from("#line1-part1", {
-  opacity: 0,
-  onStart: function () {
-    var h5timer = document.querySelector("#line1-part1 h5");
-    var grow = 0;
-    setInterval(function () {
-      if (grow < 100) {
-        h5timer.innerHTML = grow++;
-      } else {
-        h5timer.innerHTML = grow;
+function loadingAnima() {
+  var timer = document.querySelector("#loader h3");
+  var img = document.querySelector("#loader img");
+  var grow = 0;
+
+  var interval = setInterval(function () {
+    if (grow < 100) {
+      grow++;
+      timer.innerHTML = grow + "%";
+
+      if (grow % 10 === 0) {
+        let index = grow / 10; // 20% = 1, 40% = 2, ..., 100% = 5
+        img.setAttribute("src", `/assets/e${index}.svg`);
       }
-    }, 33);
-  },
-});
-tl.to('.line h2',{
-    animationName:"anime",
-    opacity:1
-})
-tl.to("#loader", {
-  opacity: 0,
-  duration: 0.2,
-  delay: 3,
-});
-tl.from("#page1",{
-    delay:0.2,
-    y:1600,
-    duration:0.6,
-    ease:Power4
-})
-tl.to("#loader",{
-    display:"none"
-})
-tl.from("#nav",{
-    opacity:0
-})
-tl.from("#page1 span",{
-    y:700,
-    duration:0.7,
-    stagger:0.1
-  })
+    } else {
+      grow = 100;
+      timer.innerHTML = grow + "%";
+      clearInterval(interval);
+    }
+  }, 20);
+
+  // GSAP animations
+  gsap.to("#loader", {
+    y: "-100vh",
+    delay: 2.5,
+    duration: 0.4,
+  });
+  gsap.from("#page1 span", {
+    y: 700,
+    delay: 2.4,
+    duration: 0.7,
+    stagger: 0.1,
+  });
 }
+
+
 function herovideo(){
   gsap.to("#page2 video",{
   
@@ -108,6 +95,6 @@ function experties(){
   })
 }
 locomotive()
-loadingAnimation()
+loadingAnima()
 herovideo()
 experties()
