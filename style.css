@@ -10,9 +10,12 @@
     font-family: "degular";
     src: url("https://use.typekit.net/af/fbbea0/00000000000000007735c876/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3");
 }
+@font-face {
+    font-family: "ivypresto";
+    src: url("https://use.typekit.net/af/d1f353/00000000000000007735e5ab/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3");
+}
 *{
-    background-color: #151414;
-    color: #F3C77C; 
+    /* color: #F3C77C;  */
     margin: 0;
     padding: 0;
 }
@@ -45,16 +48,16 @@ body,html{
     width: auto;
     animation: spin 2s linear infinite;
 }
-/* #main{
-    height: 100%;
-    width: 100%;
-} */
+#main{
+    position: relative;
+}
 
 #nav{
     display: flex;
     z-index: 99;
     position: relative;
     justify-content: space-between;
+    background-color: #151414;
     align-items: center;
     padding: 1.4vw 1.5vw;
 }
@@ -76,9 +79,11 @@ body,html{
     width: 100%;   
     align-items: center;
     text-align: center;
+    background-color: #151414;
 }
 #page1 span {
     font-size: 50vw;
+    color: #F3C77C;
     display: inline-block;
     position: relative;
     font-weight: 900;
@@ -121,12 +126,15 @@ body,html{
 }
 
 #page3{
-    height: 100vh;
+    min-height: 200vh;
     width: 100%;
+    position: relative;
+    background-color: #151414;
 }
 #page4{
     height: 100vh;
     width: 100%;
+    position: relative;
     background-color: #9AC1CB;
 }
 #page4 h1{
@@ -142,4 +150,35 @@ body,html{
     height: 100vh;
     width: 100%;
     background-color: #151414;
+}
+.lines{
+    color: #E7CFB1;
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    /* background-color: aqua; */
+    margin-top: 1vw;
+    padding: 0vw 4.8vw;
+    font-size: 6.6vw;
+    line-height: 0.6;
+    font-family: "helvetica";
+}
+#two,#three,#four{
+    margin-top: 2vw;
+}
+#three{
+    padding-left: 28.5vw;
+}
+
+#aid{
+    font-family: "ivypresto";
+    font-weight: 400;
+}
+.pad{
+    padding-left: 2vw;
+}
+#showcase{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #151414; */
 }
