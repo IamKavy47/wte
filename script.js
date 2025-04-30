@@ -35,25 +35,25 @@ function loadingAnima() {
   var grow = 0;
 
   var interval = setInterval(function () {
-    if (grow < 100) {
+    if (grow < 110) {
       grow++;
       timer.innerHTML = grow + "%";
 
       if (grow % 10 === 0) {
         let index = grow / 10; // 20% = 1, 40% = 2, ..., 100% = 5
-        img.setAttribute("src", `/assets/e${index}.svg`);
+        img.setAttribute("src", `/assets/loader/${index}.svg`);
       }
     } else {
-      grow = 100;
+      grow = 110;
       timer.innerHTML = grow + "%";
       clearInterval(interval);
     }
-  }, 20);
+  }, 22);
 
   // GSAP animations
   gsap.to("#loader", {
     y: "-100vh",
-    delay: 2.5,
+    delay: 2.55,
     duration: 0.4,
   });
   gsap.from("#page1 span", {
@@ -66,7 +66,8 @@ function loadingAnima() {
 
 
 function herovideo(){
-  gsap.to("#page2 video",{
+  var tl = gsap.timeline();
+  tl.to("#page2 video",{
   
     width:"100%",
     scrollTrigger:{
@@ -78,7 +79,58 @@ function herovideo(){
       scrub:1
     }
   })
+  tl.from("#page3 #one", {
+    y: 200,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: "#page3 h1",
+      scroller: "#main",
+      start: "top 100%",
+      end: "top 95%",
+      scrub: 1,
+      // markers: true 
+    }
+  });
+  tl.from("#page3 #two", {
+    y: 200,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: "#page3 h1",
+      scroller: "#main",
+      start: "top 95%",
+      end: "top 90%",
+      scrub: 1,
+      // markers: true 
+    }
+  });
+  tl.from("#page3 #three", {
+    y: 200,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: "#page3 h1",
+      scroller: "#main",
+      start: "top 70%",
+      end: "top 65%",
+      scrub: 1,
+      // markers: true 
+    }
+  });
+  tl.from("#page3 #four", {
+    y: 200,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: "#page3 h1",
+      scroller: "#main",
+      start: "top 50%",
+      end: "top 45%",
+      scrub: 1,
+      // markers: true 
+    }
+  });
+  
+  
 }
+
 function experties(){
   gsap.to("#page4 h1",{
     transform:"translateX(-130vw)",
